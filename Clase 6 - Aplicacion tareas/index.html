@@ -5,20 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tareas</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .body{
+            grid-row: auto;
+            margin: 30px;
+            padding: 3px;
+            border: 7px solid black;
+            background-color: beige;
+            align-items: center;
+        }
+        .titulo{
+            text-align: center;
+            background-color: bisque;
+            color: red;
+            font-size: 50px;
+            font-style: oblique;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+         #tablaTareas{
+            margin: auto;
+            width: 50%;
+            border: 3px solid black;
+            padding: 10px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 20px;
+
+        }
+
+        .edit{
+            color: red;
+            font-size: 25px;
+            font-style: oblique;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: auto;
+        }
+        .btn1{
+            margin: auto;
+            width: 30%;
+            border: 4px solid red;
+            padding: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: red;
+            align-content: center;
+        }
+        #eliminar{
+            color: red;
+            font-size: 25px;
+            font-style: oblique;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: auto;
+        }
+        h3{
+            color: red;
+            font-size: 30px;
+            font-style: unset;
+
+        }
+    </style>
 </head>
-<body>
-    <h1>Tareas</h1>
-    <table id="tablaTareas">
+<body class="body">
+    <h1 class="titulo">Tareas:</h1>
+    <table id="tablaTareas" >
 
     </table>
-    <a href="add.html"><button><h2>Nueva Tarea</h2></button></a>
-    <h2>Editar</h2>
+    <a href="add.html" class="btn1"><button><h2>Nueva Tarea</h2></button></a>
+    <h2 class="edit">Editar</h2>
     <form action="edit.html">
         ID tarea a editar:
         <input type="number" name="id" min="0" step="1" required>
         <button type="submit">Editar</button>
     </form>
-    <h2>Eliminar</h2>
+    <h2 id="eliminar">Eliminar</h2>
     <h3>PRECAUCIÓN, ESTA ACCIÓN NO SE PUEDE DESHACER</h3>
     <form id="deleteForm">
         ID tarea a eliminar:
